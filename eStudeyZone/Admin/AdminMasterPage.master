@@ -1,0 +1,211 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="../styles/layout.css" type="text/css" />
+<script type="text/javascript" src="../scripts/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.slidepanel.setup.js"></script>
+<script type="text/javascript" src="../scripts/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.tabs.setup.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+  <div class="wrapper col0">
+  <div  id="topbar">
+     
+   <div id="slidepanel">
+     <%-- <div class="topbox">
+        <h2>eStudey Zone !!</h2>
+        <p>The e-studyzone provide a common plateform for all learners and trainers. Learner is the one who wants to gather knowledge and Trainer is the one who will provide information. It is required to build a portal that will be used worldwide.</p>
+        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+      </div>
+      <div class="topbox">
+        <h2>User Login</h2>
+      
+          <fieldset>
+            <legend>User Login</legend>
+            <label for="teachername">Username:
+              <input type="text" name="teachername" id="teachername" value="" />
+            </label>
+            <label for="teacherpass">Password:
+              <input type="password" name="teacherpass" id="teacherpass" value="" />
+            </label>
+            <label for="teacherremember">
+              <input class="checkbox" type="checkbox" name="teacherremember" id="teacherremember" checked="checked" />
+              Remember me</label>
+            <p>
+              <input type="submit" name="teacherlogin" id="teacherlogin" value="Login" />
+              &nbsp;
+              <input type="reset" name="teacherreset" id="teacherreset" value="Reset" />
+            </p>
+          </fieldset>
+       
+      </div>
+      <div class="topbox last">
+        <h2>Administrator Login</h2>
+      
+          <fieldset>
+            <legend>Pupils Login Form</legend>
+            <label for="pupilname">Username:
+              <input type="text" name="pupilname" id="pupilname" value="" />
+            </label>
+            <label for="pupilpass">Password:
+              <input type="password" name="pupilpass" id="pupilpass" value="" />
+            </label>
+            <label for="pupilremember">
+              <input class="checkbox" type="checkbox" name="pupilremember" id="pupilremember" checked="checked" />
+              Remember me</label>
+            <p>
+              <input type="submit" name="pupillogin" id="pupillogin" value="Login" />
+              &nbsp;
+              <input type="reset" name="pupilreset" id="pupilreset" value="Reset" />
+            </p>
+          </fieldset>
+      
+      </div>--%>
+      <br class="clear" />
+    </div>
+    <div id="loginpanel">
+      <ul>
+        <li class="left">Settings &raquo;</li>
+        <li class="right" id="toggle"><a id="slideit" href="../Signout.aspx">Signout</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="#">eStudyCenter</a></h1>
+      <p><i>A Common plateform for Trainer & Larner</i></p>
+    </div>
+    <div class="fl_right">
+      <ul>Welcome,
+      
+          <li> <asp:Label ID="lblLearn" ForeColor="#990000" runat="server" Font-Size="Medium" Text="Administrator "></asp:Label>&nbsp;</li>
+        
+      </ul>
+      <p>    </p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="topnav">
+    <ul>
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="../AboutUs.aspx">About Us</a></li>
+      <li><a href="../NewsPortal.aspx">News Portal</a></li>
+      <li><a href="../Suggestion.aspx">Suggestion</a></li>
+      <li class="last"><a href="../Blog.aspx">Blog</a></li>
+     <!-- <li><a href="#">Join Us</a>
+        <ul>
+          <li><a href="#">For Learner</a></li>
+          <li><a href="#">For Trainer</a></li>
+          
+        </ul>
+      </li>-->
+        
+    </ul>
+  </div>
+</div>
+<!-- #############################   Contant Page  ########################################################################## -->
+
+        <div class="wrapper col4">
+          <div id="container">
+                   <div id="content">
+                       <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
+
+
+
+
+                       </asp:ContentPlaceHolder>
+       </div>
+    <div id="column">
+        <div class="subnav">
+        <h2 style="color:maroon;">Administrator </h2>
+        <ul>
+          <li><a href="ViewSuggestion.aspx">View Suggestions</a></li>
+          <li><a href="ManageBlog.aspx">Manage Blog</a>
+          </li>
+          <li><a href="ManageTrainerProfile.aspx">Manage Trainer</a>
+          <li><a href="ManageLearner.aspx">Manage Learner</a>
+          </li>
+          <li><a href="ChangePassword.aspx">Change Password</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>         
+           </div>
+      </div>
+    <div class="wrapper col5">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+    
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+    
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+    <div class="footbox">
+      <h2>Lacus interdum</h2>
+      <ul>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li class="last"><a href="#">Praesent et eros</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Lacus interdum</h2>
+      <ul>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li class="last"><a href="#">Praesent et eros</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Lacus interdum</h2>
+      <ul>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li class="last"><a href="#">Praesent et eros</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - </p>
+    <p class="fl_right">Developers Name : Neetu</p>
+    <br class="clear" />
+  </div>
+</div>
+
+
+    </form>
+</body>
+</html>
